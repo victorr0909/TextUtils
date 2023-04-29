@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar/>
       <div className="container my-3">
-      <TextForm/>
+       <TextForm/> 
       <About/>
       </div>
     </>
