@@ -41,7 +41,6 @@ export default function TextForm(props) {
                 <h2>Preview</h2>
                 <p>{text}</p>
             </div>
-            
             </>
   )
 }
