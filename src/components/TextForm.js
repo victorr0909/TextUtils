@@ -1,21 +1,22 @@
 import React, {useState} from 'react'
 
-
-
 export default function TextForm(props) {
     const handleUpClick =()=>{
         console.log("Uppercase was clicked" + text);
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to Upper Case!" , "success");
     }
     const handleLoClick =()=>{
         console.log("Uppercase was clicked" + text);
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to Lower Case!" , "success");
     }
     const handleToClick =()=>{
         let newText =("");
         setText(newText);
+        props.showAlert("Text Cleared!" , "success");
     }
     const handleOnChange =(event)=>{
         console.log("On Change");
@@ -26,11 +27,13 @@ export default function TextForm(props) {
             var text = document.getElementById("myBox");
             text.select();
             navigator.clipboard.writeText(text.value);
+            props.showAlert("Copied to Clipboard!" , "success");
             }    
     
     const handleExtraSpaces = () =>{
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "))
+        props.showAlert("Extra Spaces Removed!" , "success");
     }
     const [text, setText]=useState('');
         return (
