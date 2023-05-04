@@ -3,8 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-// import About from './components/About';
-//import {BrowserRouter as Router,  Switch, Route} from "react-router-dom";
+ import About from './components/About';
+import {BrowserRouter as Router,  Switch, Route} from "react-router-dom";
 // import TextForm from './components/TextForm';
 
 
@@ -38,21 +38,21 @@ function App() {
   }
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
         <Alert alert={alert} />
 
         <div className="container my-3">
-        {/* <Switch>
+         <Switch>
             <Route exact path="/about">
-              <About /> */}
-            {/* </Route>
-            <Route exact path="/"> */}
+              <About /> 
+            </Route>
+            <Route exact path="/"> 
               <TextForm showAlert={showAlert}  mode={mode}/> 
-            {/* </Route>
-        </Switch> */}
+            </Route>
+        </Switch> 
         </div>
-      {/* </Router> */}
+       </Router> 
     </>
   );
 }
